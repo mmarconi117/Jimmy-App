@@ -1,42 +1,237 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
+.center-container {
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-width: none;
+}
+
+
+
+
+.me {
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+}
+
+.me img {
+  width: 50%;
+  height: auto;
+}
+
+
+.description-box {
+  width: 50%;
+  margin-bottom: 200px;
+  padding: 20px;
   text-align: center;
+  font-size: xx-large;
+  color: white;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Add these new styles for the transition effect */
+.description-box p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease-in-out, transform 1s ease-in-out;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.description-box p.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* App.css */
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-form-button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+
+.open-form-button:hover {
+  background-color: darkblue;
+}
+
+
+
+
+.undercar-title {
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+}
+
+.undercartitle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.undercartitle-container h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.undercar-left {
+  flex: 1;
+  padding: 0 20px;
+  padding-left: 75px;
+}
+
+.undercar-middle {
+  flex: 1;
+  padding: 0 20px;
+  padding-left: 100px;
+  margin-top: 50px;
+}
+
+.undercar-middle img {
+  height: 45rem;
+  width: auto;
+}
+
+.undercar-right {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.undercar-right video {
+  margin-top: 50px;
+  height: 40rem;
+  width: auto;
+}
+
+.leftp {
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+@media only screen and (max-width: 375px) {
+  .carousel {
+    width: 90%;
+    height: 40vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .me {
+    margin-top: 150px;
+  }
+
+  .me img, .description-box, .undercar-middle img, .undercar-right video {
+    width: 100%;
+    height: auto;
+  }
+
+  .description-box {
+    font-size: large;
+  }
+
+  .undercar-title {
+    font-size: 3rem;
+  }
+
+  .undercartitle-container h1 {
+    font-size: 2rem;
+  }
+
+  .leftp {
+    font-size: medium;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* iPhone 12/13 and similar (390px wide) */
+@media only screen and (max-width: 390px) {
+  .carousel {
+    width: 80%;
+    height: 45vh;
+  }
+
+  .me {
+    margin-top: 150px;
+  }
+
+  .me img, .description-box, .undercar-middle img, .undercar-right video {
+    width: 100%;
+    height: auto;
+  }
+
+  .description-box {
+    font-size: x-large;
+  }
+
+  .undercar-title {
+    font-size: 4rem;
+  }
+
+  .undercartitle-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .leftp {
+    font-size: large;
   }
 }
 
-.card {
-  padding: 2em;
-}
+/* iPhone 12/13 Pro Max and similar (428px wide) */
+@media only screen and (max-width: 428px) {
+  .carousel {
+    width: 70%;
+    height: 50vh;
+  }
 
-.read-the-docs {
-  color: #888;
+  .me {
+    margin-top: 150px;
+  }
+
+  .me img, .description-box, .undercar-middle img, .undercar-right video {
+    width: 100%;
+    height: auto;
+  }
+
+  .description-box {
+    font-size: xx-large;
+  }
+
+  .undercar-title {
+    font-size: 4.5rem;
+  }
+
+  .undercartitle-container h1 {
+    font-size: 3rem;
+  }
+
+  .leftp {
+    font-size: large;
+  }
 }
