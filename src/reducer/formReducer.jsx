@@ -1,5 +1,5 @@
 // formReducer.jsx
-import { SHOW_FORM, HIDE_FORM } from "../actions/formAction";
+import { SHOW_FORM, HIDE_FORM } from "../action/formAcion";
 
 const initialState = {
     isFormVisible: false
