@@ -1,79 +1,27 @@
+/* Import Tailwind's styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-.carousel-container {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 50%;
-  height: 50vh;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  background-color: rgba(222, 184, 135, 0.2);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: top;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
 .center-container {
   background-image: url('./images/innaworking.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 110rem;
+  background-size: 120% 130%; /* Try using specific dimensions or percentages */
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  min-width: none;
+  justify-content: center;
+  min-height: 100vh; /* Minimum height of the viewport */
+  min-width: 100vw; /* Minimum width of the viewport */
 }
-
-
-
 
 .me {
   display: flex;
@@ -85,7 +33,6 @@ body, html {
   width: 50%;
   height: auto;
 }
-
 
 .description-box {
   width: 50%;
@@ -108,8 +55,6 @@ body, html {
   transform: translateY(0);
 }
 
-
-/* App.css */
 .form-button {
   display: flex;
   justify-content: center;
@@ -129,13 +74,9 @@ body, html {
   margin-bottom: 50px;
 }
 
-
 .open-form-button:hover {
   background-color: darkblue;
 }
-
-
-
 
 .undercar-title {
   text-align: center;
@@ -192,6 +133,7 @@ body, html {
   font-size: x-large;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 375px) {
   .carousel {
     width: 90%;
@@ -224,7 +166,6 @@ body, html {
   }
 }
 
-/* iPhone 12/13 and similar (390px wide) */
 @media only screen and (max-width: 390px) {
   .carousel {
     width: 80%;
@@ -257,7 +198,6 @@ body, html {
   }
 }
 
-/* iPhone 12/13 Pro Max and similar (428px wide) */
 @media only screen and (max-width: 428px) {
   .carousel {
     width: 70%;
