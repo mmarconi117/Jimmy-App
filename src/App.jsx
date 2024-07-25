@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Form from './components/Form';
 import { showForm, hideForm } from './action/formAcion'; // Corrected import path
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   const [autoplayInterval, setAutoplayInterval] = useState(null);
@@ -30,16 +31,12 @@ function App() {
 
   return (
     <>
+  <div className='header'>
+    <Header />
+  </div>
+
       <div className='center-container'>
-        <div className="me">
-          {/* <img src={} alt="inna" /> */}
-        </div>
-        <div className="description-box">
-          <p className={fadeIn ? 'fade-in' : ''}>
-            Specializing in: Hair, Makeup, Massages, nails, and wedding prep. Fill out the form below to make an
-            appointment or contact me via email!
-          </p>
-        </div>
+
       </div>
 
 

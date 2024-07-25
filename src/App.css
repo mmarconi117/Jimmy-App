@@ -1,7 +1,4 @@
-/* Import Tailwind's styles */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 /* Custom Styles */
 body, html {
@@ -11,7 +8,7 @@ body, html {
 }
 
 .center-container {
-  background-image: url('./images/innaworking.jpg');
+  /* background-image: url('./images/innaworking.jpg'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120% 130%; /* Try using specific dimensions or percentages */
