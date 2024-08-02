@@ -8,17 +8,18 @@ body, html {
 }
 
 .center-container {
-  /* background-image: url('./images/innaworking.jpg'); */
+  background-image: url('https://media.istockphoto.com/id/1162761698/photo/safe-drinking-tap-water.jpg?s=612x612&w=0&k=20&c=ixVOC4flCw4qkWaebMrdAYcCe7OiURfNTg0bLK3QFK4=');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 120% 130%; /* Try using specific dimensions or percentages */
+  background-size: 120% 130%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Minimum height of the viewport */
-  min-width: 100vw; /* Minimum width of the viewport */
+  min-height: 100vh;
+  min-width: 100vw;
 }
+
 
 .me {
   display: flex;
