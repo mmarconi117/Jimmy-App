@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Form from './components/Form';
 import { showForm, hideForm } from './action/formAcion'; // Corrected import path
@@ -8,18 +8,8 @@ import Header from './components/Header';
 function App() {
   const [autoplayInterval, setAutoplayInterval] = useState(null);
   const [fadeIn, setFadeIn] = useState(false);
-  const isFormVisible = useSelector(state => state.form.isFormVisible);
+  const isFormVisible = useSelector((state) => state.form.isFormVisible);
   const dispatch = useDispatch();
-
-
-
-
-
-
-
-
-
-
 
   const handleFormToggle = () => {
     if (isFormVisible) {
@@ -31,12 +21,27 @@ function App() {
 
   return (
     <>
-  <div className='header'>
-    <Header />
-  </div>
+      <div className="header">
+        <Header />
+      </div>
 
-      <div className='center-container'>
-
+      <div className="center-container">
+        <div className="box">
+          <img src="image1.jpg" alt="Image 1" className="box-image" />
+          <p className="box-text">Text for Box 1</p>
+        </div>
+        <div className="box">
+          <img src="image2.jpg" alt="Image 2" className="box-image" />
+          <p className="box-text">Text for Box 2</p>
+        </div>
+        <div className="box">
+          <img src="image3.jpg" alt="Image 3" className="box-image" />
+          <p className="box-text">Text for Box 3</p>
+        </div>
+        <div className="box">
+          <img src="image4.jpg" alt="Image 4" className="box-image" />
+          <p className="box-text">Text for Box 4</p>
+        </div>
       </div>
 
 
